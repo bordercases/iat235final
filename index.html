@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>IAT235 Final Project</title>
+  <link href="css/mosaic.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/grids.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-bootstrap/0.5pre/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/jquery-ui.css" rel="stylesheet">
+  <style>
+    .mosaic-grid {
+    position: relative;
+    width: 500px;
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+    }
+    
+    /* Base */
+            .mosaic-tile {
+                float: left;
+                margin: 0;
+                opacity: 0;
+                box-sizing: border-box;
+                transition: margin-top .6s, margin-left .6s;
+            }
+
+            .test {
+                background-color: #E4CAAC;
+                border: 1px solid #A9C7D1;
+            }
+
+            .a {
+                background-color: #5F3049;
+            }
+
+            .b {
+                background-color: #E7A365;
+            }
+
+            .c {
+                background-color: #CA6650;
+            }
+
+            .d {
+                background-color: #2B274B;
+            }
+
+            .e {
+                background-color: #46857C;
+            }
+            
+            .js-tile-style {
+                background-color: transparent;
+            }
+            
+            .special {
+                background-color: black;
+            }
+            
+            @media only screen and (min-width: 1200px) {
+                .mosaic-grid {
+                    width: 1000px;
+                }
+            }
+        </style>
+</head>
+
+<header id="about">
+  <style>
+header {
+    padding-top: 50px;
+}
+header, footer {
+    background: #228B22;
+    color: black;
+}
+nav {
+    text-align: center;
+    background: white;
+position: fixed;
+top: 0;
+width: 100%;
+height: 8%;
+}
+nav a {
+    display: inline-block;
+    padding: 25px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: red;
+}
+
+  </style>
+  <nav class="display">
+    <a href="about.html">About</a>
+    <a href="#">Membership</a>
+    <a href="#">Program &amp; Events</a>
+    <a href="#">Careers</a>
+    <a href="#">Resources &amp; Publications</a>
+  </nav>
+</header>
+
+
+<body>
+
+  <div class="grid">
+    <div class="col-1-1">
+      <div id="fraser-river-img">
+	<div style="position:absolute;">
+	<h1>LOWER MAINLAND AND VICTORIA DRUGS IN SEWAGE OUTPUT</h1>
+	<h3>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</h3>
+	</div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+ <div class="grid">
+    <div class="col-1-3">
+      <div class="module grad-none">
+        <h3>Overview?</h3>
+	<p>
+	  Blanditiis autem nemo porro quod voluptate. Possimus beatae a voluptas animi suscipit quod. Quae fuga quidem voluptatibus accusantium voluptatem sit. Iste qui qui aut enim ipsum magni.
+	  <br>
+	  Similique sequi odio rem. Ut tempore perferendis velit aut qui velit et vitae. Error quibusdam consequatur magnam exercitationem tenetur. Quia aut debitis vel.
+	</p>
+	<a class="btn" href="#map">Go to Map</a>
+      </div>
+    </div>
+    <div class="col-1-3">
+      <div class="module grad-none">
+        <h3>Questions?</h3>
+	<p>
+	  Possimus at consectetur ut omnis rerum ex illum et. Voluptatibus dolores omnis libero et. Est laudantium iste exercitationem id aut sit. Ad ipsam nulla sapiente nobis hic atque aut.
+	  <br>
+Quaerat omnis voluptatibus non molestiae. Aut odit reprehenderit ipsum facilis voluptatum fugit ut qui. Sit id cupiditate officiis velit odit aliquam. Aut et dicta voluptatem. Dignissimos assumenda maxime vero totam eum enim ut libero.
+	</p>
+	<a class="btn" href="#questions">Go to Questions</a>
+      </div>
+    </div>
+    <div class="col-1-3">
+      <div class="module grad-none">
+        <h3>Solutions?</h3>
+	<p>
+	  Possimus at consectetur ut omnis rerum ex illum et. Voluptatibus dolores omnis libero et. Est laudantium iste exercitationem id aut sit. Ad ipsam nulla sapiente nobis hic atque aut.
+	  <br>
+	  Quaerat omnis voluptatibus non molestiae. Aut odit reprehenderit ipsum facilis voluptatum fugit ut qui. Sit id cupiditate officiis velit odit aliquam. Aut et dicta voluptatem. Dignissimos assumenda maxime vero totam eum enim ut libero.
+	  <br>
+	</p>
+	<a class="btn" href="#solutions-wrapper">Go to Solutions</a>
+      </div>
+    </div>
+  </div>
+  -->
+  
+  <div class="grid">
+    <div class="col-1-1" id="top">
+      <div class="module grad-none">
+        <h1 style="text-align:left;">The Problem With Complexity</h1>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+	<img style="display:block; margin-left:auto; margin-right:auto;" src="images/hte.png">
+      </div>
+    </div>
+  </div>
+
+  <div class="grid" id="map">
+    <div class="col-1-1">
+      <div class="module clean">
+        <h2>Regional Maps</h2>
+	<div id="layer-checkbox">
+	  <fieldset>
+	    <legend>Select a Topic </legend>
+	    <label for="radio-1">Sewer Locations</label>
+	    <input type="radio" name="radio-1" id="radio-1">
+	    <label for="radio-2">Water Current Flow</label>
+	    <input type="radio" name="radio-1" id="radio-2">
+	    <label for="radio-3">Disease Rates</label>
+	    <input type="radio" name="radio-1" id="radio-3">
+	  </fieldset>
+        </div>
+	
+	<img id="map-1" name="map-sewage" src="images/map/sewage.jpg" hidden>
+	<img id="map-2" name="map-current" src="images/map/current.jpg" hidden>
+
+        <div class="description-container description-black">
+          <h3>Map</h3>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+<section>
+
+  <div class="grid" id="questions">
+    <div class="col-1-1">
+      <div class="module grad-none">
+        <h3>Questions</h3>
+	<!--
+	<section>
+	  <div id="mosaic-grid" class="mosaic-grid">
+            <div data-mosaic-row="1" data-mosaic-col="0: 1, 1200: 8" class="mosaic-tile size width-2 height-2 test special js-tile-style" style="margin-top: 11.1%; margin-left: 80.2%;"></div>
+            <div class="mosaic-tile test sizer a js-tile-style" style="margin-top: 1%; margin-left: 1%;"></div>
+            <div class="mosaic-tile width-2 test b js-tile-style" style="margin-top: 1%; margin-left: 10.9%;"></div>
+            <div data-mosaic-row="0: 4, 1200: 0" data-mosaic-col="0: 1, 1200: 4" class="mosaic-tile height-2 test c special js-tile-style" style="margin-top: 1%; margin-left: 40.6%;"></div>
+            <div class="mosaic-tile width-4 test d js-tile-style" style="margin-top: 1%; margin-left: 50.5%;"></div>
+            <div class="mosaic-tile height-3 width-2 test e js-tile-style" style="margin-top: 11.1%; margin-left: 1%;"></div>
+            <div class="mosaic-tile test a js-tile-style" style="margin-top: 1%; margin-left: 30.7%;"></div>
+            <div class="mosaic-tile width-2 test b js-tile-style" style="margin-top: 11.1%; margin-left: 20.8%;"></div>
+            <div class="mosaic-tile height-2 test c js-tile-style" style="margin-top: 11.1%; margin-left: 50.5%;"></div>
+            <div class="mosaic-tile test a js-tile-style" style="margin-top: 1%; margin-left: 90.1%;"></div>
+            <div class="mosaic-tile width-3 test b js-tile-style" style="margin-top: 21.2%; margin-left: 20.8%;"></div>
+            <div class="mosaic-tile test c js-tile-style" style="margin-top: 11.1%; margin-left: 60.4%;"></div>
+            <div class="mosaic-tile test e js-tile-style" style="margin-top: 11.1%; margin-left: 70.3%;"></div>
+            <div class="mosaic-tile height-4 test e js-tile-style" style="margin-top: 21.2%; margin-left: 60.4%;"></div>
+            <div class="mosaic-tile width-2 test b js-tile-style" style="margin-top: 31.3%; margin-left: 20.8%;"></div>
+            <div class="mosaic-tile height-2 test c js-tile-style" style="margin-top: 21.2%; margin-left: 70.3%;"></div>
+            <div class="mosaic-tile test a js-tile-style" style="margin-top: 31.3%; margin-left: 40.6%;"></div>
+            <div class="mosaic-tile width-3 test b js-tile-style" style="margin-top: 41.4%; margin-left: 1%;"></div>
+            <div class="mosaic-tile test c js-tile-style" style="margin-top: 31.3%; margin-left: 50.5%;"></div>
+            <div class="mosaic-tile test e js-tile-style" style="margin-top: 31.3%; margin-left: 80.2%;"></div>
+	  </div>
+	</section>
+	-->
+      </div>
+    </div>
+  </div>
+</section>
+
+    <div class="grid grid-pad">
+      <div class="col-2-3">
+	<div class="module grad-environment">
+          <h3>Why is this issue important?</h3>
+	  <img id="info-1" name="info-fish" src="images/fish.png">
+	</div>
+      </div>
+      <div class="module grad-none">
+        <h3>What can I do?</h3>
+      </div>
+    </div>
+    
+    <div class="grid grid-pad">
+      <div class="col-2-3">
+      <div class="module grad-human">
+        <h3>How does medication become harmful for the environment?</h3>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+      </div>
+      <div class="module grad-none">
+        <h3>What can I do?</h3>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam.</p>
+      </div>
+    </div>
+    
+    <div class="grid grid-pad">
+      <div class="col-2-3">
+	<div class="module grad-technology">
+          <h3>Why are sewers not good enough?</h3>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+	</div>
+      </div>
+      <div class="module grad-none">
+        <h3>What can I do?</h3>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam.</p>
+      </div>
+    </div>
+</body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript">
+  </script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+  <script src="js/mosaic.js" type="text/javascript"></script>
+
+  <script>
+    $(function() {
+    var radios = $( "input[type='radio']" ).checkboxradio();
+    $( "#radio-1" ).prop("checked", true);
+    $( "#map-1" ).prop("hidden", false);
+    });
+
+    $('input[type=radio]').change(
+    function(){
+        if (this.checked) {
+    // hide all images
+    $("img[id^='map-']").hide();
+    // unhide the image whose value ends with the id val of this
+    var radioId = Number(this.id.split("-")[1]);
+    $("img[id^='map-'][id$="+radioId+"]").show();
+    }
+    });
+    
+  </script>
+</html>

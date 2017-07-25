@@ -1,0 +1,118 @@
+
+/*
+	This tutorial draws from "Don't Overthink Grids" available at
+	http://css-tricks.com/dont-overthink-it-grids/
+*/
+
+
+/*
+	With this selector, we are specifying that all objects use
+	the border-box model (not the content-box model)
+*/
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/*
+	Here we are using a 'fancy' css selector that is
+	specifying if the class of an item starts with
+	'grid-col-', then we should apply the styling listed
+*/
+[class^='grid-col-'] {
+	float: left;
+	padding: 0;
+	 /* center the content in this block by default */
+}
+
+
+/*
+	Here we are defining our default column widths with the intention
+	of keeping it 'mobile first'
+*/
+.grid-col-5of10, .grid-col-2of10, .grid-col-1of1 {
+	width: 100%;
+}
+
+
+
+
+/*
+	Here we are clearing floated items to ensure that
+	our 'grid' structure can have different rows
+*/
+.grid-row:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+
+/*
+	Using further @media queries, we specify that at a width of
+	less than 30em it should collapse the 2/10 columns into one stack
+
+	Think of this as saying, when display width > 30em, apply this
+*/
+@media (min-width: 30em) {
+
+	.grid-col-1of1 {
+		width: 100%;
+		padding-right:1em;
+		padding-left:1em;
+	}
+
+	.grid-col-2of10 {
+		width: 20%;
+	}
+
+
+	#button-nav {display:none}
+	nav {display:block}
+}
+
+
+/*
+	Here using @media queries, we are specifying when the display
+	has a width less than 50em it should collapse the 5/10 columns
+	into one stack (hence width: 100%)
+
+	Think of this as saying, when display width > 50em, apply this
+*/
+@media (min-width: 50em) {
+	.grid-col-1of1 {
+		width: 100%;
+		padding-right:1em;
+		padding-left:1em;
+	}
+
+	.grid-col-5of10 {
+		width: 50%;
+	}
+
+	.grid-col-5of10:first-of-type {
+		padding-right: 0.5em;
+	}
+
+	.grid-col-5of10:last-of-type {
+		padding-left: 0.5em;
+	}
+	#button-nav {display:none}
+}
+
+@media (max-width: 31em) {
+
+	.grid-col-1of1 {
+		width: 100%;
+		padding-right:1em;
+		padding-left:1em;
+	}
+
+	.grid-col-2of10 {width: 100%;}
+	#button-nav {display:block}
+	nav {display:none}
+
+}
