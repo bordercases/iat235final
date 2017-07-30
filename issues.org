@@ -1,0 +1,29 @@
+* TODO Navigation Bar
+** Sections need to reflect website structure
+** Navigation element font size must increase
+* TODO Introduction Section
+** Font Color
+** Copy
+** Alignment (Center both)
+* TODO Complexity Section
+** Make Graphic Have More Relationships to Systems
+* TODO Map Section
+** Final Map -- Disease Rates
+** Autoselect first option
+** Remove select a topic (assume affordances are there for radio menu)
+** Default selection is not reset?
+** Copy for each map
+*** Map 1
+*** Map 2
+*** Map 3
+*** Change Description Behavior
+* TODO Questions Section
+** Mosaic?
+* TODO Answers Section
+** Whitespace Grid
+** Outside Padding
+** Copy Per Section
+*** 1
+*** 2
+*** 3
+* TODO Mobile Accessibility

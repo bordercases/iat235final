@@ -10,63 +10,6 @@
   <link href="css/grids.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-bootstrap/0.5pre/assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/jquery-ui.css" rel="stylesheet">
-  <style>
-    .mosaic-grid {
-    position: relative;
-    width: 500px;
-    height: 100%;
-    padding: 0;
-    margin: 0 auto;
-    }
-    
-    /* Base */
-            .mosaic-tile {
-                float: left;
-                margin: 0;
-                opacity: 0;
-                box-sizing: border-box;
-                transition: margin-top .6s, margin-left .6s;
-            }
-
-            .test {
-                background-color: #E4CAAC;
-                border: 1px solid #A9C7D1;
-            }
-
-            .a {
-                background-color: #5F3049;
-            }
-
-            .b {
-                background-color: #E7A365;
-            }
-
-            .c {
-                background-color: #CA6650;
-            }
-
-            .d {
-                background-color: #2B274B;
-            }
-
-            .e {
-                background-color: #46857C;
-            }
-            
-            .js-tile-style {
-                background-color: transparent;
-            }
-            
-            .special {
-                background-color: black;
-            }
-            
-            @media only screen and (min-width: 1200px) {
-                .mosaic-grid {
-                    width: 1000px;
-                }
-            }
-        </style>
 </head>
 
 <header id="about">
@@ -174,7 +117,6 @@ Quaerat omnis voluptatibus non molestiae. Aut odit reprehenderit ipsum facilis v
         <h2>Regional Maps</h2>
 	<div id="layer-checkbox">
 	  <fieldset>
-	    <legend>Select a Topic </legend>
 	    <label for="radio-1">Sewer Locations</label>
 	    <input type="radio" name="radio-1" id="radio-1">
 	    <label for="radio-2">Water Current Flow</label>
@@ -184,15 +126,27 @@ Quaerat omnis voluptatibus non molestiae. Aut odit reprehenderit ipsum facilis v
 	  </fieldset>
         </div>
 	
-	<img id="map-1" name="map-sewage" src="images/map/sewage.jpg" hidden>
-	<img id="map-2" name="map-current" src="images/map/current.jpg" hidden>
+	<span id="map-1" hidden>
+	  <img id="map-1-img" name="map-sewage" src="images/map/sewage.jpg">
+          <div id="map-1-desc"class="description-container description-black">
+            <h3>Sewer Locations</h3>
+          </div>
+	</span>
+	<span id="map-2" hidden>
+	  <img id="map-2-img" name="map-current" src="images/map/current.jpg" >
+          <div id="map-2-desc"class="description-container description-black">
+            <h3>Water Current Flow</h3>
+          </div>
+	</span>
+	<span id="map-3" hidden>
+	  <img id="map-3-img" name="map-sewage" src="images/map/sewage.jpg">
+          <div id="map-3-desc"class="description-container description-black">
+            <h3>Disease Rates</h3>
+          </div>
+	</span>
 
-        <div class="description-container description-black">
-          <h3>Map</h3>
-	  <div></div>
-	  <div></div>
-	  <div></div>
-        </div>
+	
+
         
       </div>
     </div>
@@ -234,7 +188,7 @@ Quaerat omnis voluptatibus non molestiae. Aut odit reprehenderit ipsum facilis v
   </div>
 </section>
 
-    <div class="grid grid-pad">
+    <div class="grid">
       <div class="col-2-3">
 	<div class="module grad-environment">
           <h3>Why is this issue important?</h3>
@@ -246,7 +200,7 @@ Quaerat omnis voluptatibus non molestiae. Aut odit reprehenderit ipsum facilis v
       </div>
     </div>
     
-    <div class="grid grid-pad">
+    <div class="grid">
       <div class="col-2-3">
       <div class="module grad-human">
         <h3>How does medication become harmful for the environment?</h3>
@@ -259,7 +213,7 @@ Quaerat omnis voluptatibus non molestiae. Aut odit reprehenderit ipsum facilis v
       </div>
     </div>
     
-    <div class="grid grid-pad">
+    <div class="grid">
       <div class="col-2-3">
 	<div class="module grad-technology">
           <h3>Why are sewers not good enough?</h3>
@@ -281,8 +235,14 @@ Quaerat omnis voluptatibus non molestiae. Aut odit reprehenderit ipsum facilis v
 
   <script>
     $(function() {
-    var radios = $( "input[type='radio']" ).checkboxradio();
-    $( "#radio-1" ).prop("checked", true);
+    // default map
+    var radios = $( "input[type='radio']" );
+    radios.removeAttr("checked");
+    radios.checkboxradio();
+    var firstRadio = $( "input[type=radio][name='radio-1']" );
+    if(firstRadio.is(':checked') === false) {
+    firstRadio.prop("checked", true);
+    }
     $( "#map-1" ).prop("hidden", false);
     });
 
@@ -290,10 +250,10 @@ Quaerat omnis voluptatibus non molestiae. Aut odit reprehenderit ipsum facilis v
     function(){
         if (this.checked) {
     // hide all images
-    $("img[id^='map-']").hide();
+    $("span[id^='map-']").hide();
     // unhide the image whose value ends with the id val of this
     var radioId = Number(this.id.split("-")[1]);
-    $("img[id^='map-'][id$="+radioId+"]").show();
+    $("span[id^='map-'][id$="+radioId+"]").show();
     }
     });
     
