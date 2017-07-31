@@ -168,8 +168,8 @@ h2 a:hover {
 }
 
 
-p, ul, ol {
-	font-size: 1rem;
+p, h4, ul, ol {
+	font-size: 1.5rem;
 	line-height: 1.3em;
 	text-align: left;
 }
@@ -341,4 +341,14 @@ a {
 */
 .grad-none {
     background: #eee;
+}
+
+color .green {
+    color: green;
+}
+color .red {
+    color: red;
+}
+color .blue {
+    color: blue;
 }
